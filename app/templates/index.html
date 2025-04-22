@@ -62,6 +62,40 @@ href="/admin/">Administração</a>
     </div>
   </div>
 
+  <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Autor</th>
+                  <th scope="col">Editora</th>
+                  <th scope="col">Gênero</th>
+                  <th scope="col">Preço</th>
+                  <th scope="col">Data Publicação</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Excluir</th>
+              </tr>
+          </thead>
+          <tbody>
+                    {% for livro in livros %}
+                    <tr>
+                        <td>{{ livro.nome }}</td>
+                        <td>{{ livro.autor }}</td>
+                        <td>{{ livro.editora }}</td>
+                    <td>
+                      {% for genero in livros.genero.all %}
+                      {{ genero.nome }}{% if not forloop.last %},{% endif %}
+                      {% endfor %}
+                  </td>
+                    <td>{{ livro.preco }}</td>
+                    <td>{{ livro.data_plub }}</td>
+                    <td>{{ livro.status }}</td>
+                    <td><a href="delete/{{ livro.id }}" class="btn btn-danger">Excluir</a></td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+
+    
+
   <!-- Incluindo jQuery e Bootstrap JS -->
   <script
 src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
