@@ -1,5 +1,6 @@
 # Create your models here.
 from django.db import models
+
 class Cidade(models.Model):
     nome = models.CharField(max_length=100, verbose_name="Nome da cidade")
     uf = models.CharField(max_length=2, verbose_name="UF")

@@ -4,15 +4,7 @@ from django.views import View
 from django.contrib import messages
 from .models import Livro
 from .forms import LivroForm
-from flask import render_template
-from app import app, db
-from app.models import Genero
-from app.apps import app
 
-@app.route('/genero/')
-def listar_generos():
-    generos = Genero.query.all()
-    return render_template('genero.html', generos=generos)
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
