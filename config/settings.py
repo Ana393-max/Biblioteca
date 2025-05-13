@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'crispy_forms',  # <- Adicione aqui, no fim da lista de apps
-    'crispy_bootstrap4',
+    'crispy_bootstrap5',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Defina o template pack do crispy
-CRISPY_TEMPLATE_PACK = 'bootstrap4'  # ou 'bootstrap5' se for o seu caso
-CRISPY_ALLOWED_TEMPLATE_PACKs = ["bootstrap4"]
+CRISPY_TEMPLATE_PACK = 'bootstrap5'  # ou 'bootstrap5' se for o seu caso
+CRISPY_ALLOWED_TEMPLATE_PACKs = ["bootstrap5"]
 
 

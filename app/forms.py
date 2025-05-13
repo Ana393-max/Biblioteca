@@ -1,4 +1,4 @@
-from django.views import View
+from django.views import forms
 from django.shortcuts import FormHelper, Layout, Submit
 from django.contrib import messages
 from .models import *
@@ -20,7 +20,7 @@ class LivroForm(forms.ModelForm):
             'editora',
             'genero',
             'preco',
-            'data_pub',
+            'data_plub',
             'status',
             Submit('submit', 'Salvar')
 )
